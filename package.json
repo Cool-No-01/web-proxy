@@ -1,0 +1,15 @@
+{
+  "name": "web-browser-gateway",
+  "version": "0.1.0",
+  "description": "Browser Compatibility Gateway (Phase 1: HTTP Proxy Core)",
+  "type": "module",
+  "main": "src/server.js",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js"
+  },
+  "dependencies": {}
+}
