@@ -1,10 +1,10 @@
+[project]
+name = "proxyrail"
+
 [build]
-builder = "DOCKERFILE"
-dockerfilePath = "Dockerfile"
+  builder = "DOCKER"
+  dockerfilePath = "./Dockerfile"
 
 [deploy]
-startCommand = "node src/server.js"
-restartPolicyType = "ON_FAILURE"
-restartPolicyMaxRetries = 5
-healthcheckPath = "/api/health"
-healthcheckTimeout = 10
+  releaseCommand = "npm ci --only=production"
+  startCommand = "node src/url/server.js"
