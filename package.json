@@ -1,15 +1,12 @@
 {
-  "name": "web-browser-gateway",
-  "version": "0.1.0",
-  "description": "Browser Compatibility Gateway (Phase 1: HTTP Proxy Core)",
-  "type": "module",
-  "main": "src/server.js",
-  "engines": {
-    "node": ">=18.0.0"
-  },
+  "name": "proxyrail",
+  "version": "1.0.0",
+  "description": "くっそ高速・くっそUIのProXYRail (Railway版)",
+  "main": "src/url/server.js",
   "scripts": {
-    "start": "node src/server.js",
-    "dev": "node --watch src/server.js"
+    "start": "node src/url/server.js"
   },
-  "dependencies": {}
+  "dependencies": {
+    "express": "^4.19.2"
+  }
 }
