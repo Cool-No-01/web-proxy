@@ -25,7 +25,6 @@ class Pipeline {
   }
 
   async handleRequest(req, res) {
-    // 高性能ヘッダー挿入
     res.setHeader('X-Proxy-Version', this.version);
     res.setHeader('X-Proxy-Name', 'ProXYRail');
     
@@ -42,8 +41,7 @@ class Pipeline {
       return;
     }
 
-    // レスポンス圧縮
-    const acceptEncoding = req.headers['accept-encoding'] || '';
+    const acceptEncoding = (req.headers['accept-encoding'] || '').toLowerCase();
     let compress = false;
     if (acceptEncoding.includes('gzip')) {
       res.setHeader('Content-Encoding', 'gzip');
